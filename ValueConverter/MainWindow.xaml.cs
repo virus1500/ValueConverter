@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using ValueConverter.AppData;
 
 namespace ValueConverter
 {
@@ -20,9 +8,19 @@ namespace ValueConverter
     /// </summary>
     public partial class MainWindow : Window
     {
+        private CourseService _courseService;
         public MainWindow()
         {
             InitializeComponent();
+
+            _courseService = new CourseService(SellValuteCmb, BuyValuteCmb, SellAmountTB, BuyAmountTB, SellRationTBl, BuyRationTBl, UpdateDateTBl);
+
+            _courseService.LoadCourse();
+        }
+
+        private void ExchangeBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
