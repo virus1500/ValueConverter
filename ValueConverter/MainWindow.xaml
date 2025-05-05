@@ -47,9 +47,10 @@
             </Grid>
         </Border>
         <Button x:Name="ExchangeBtn" Click="ExchangeBtn_Click" Grid.Column="2" Grid.Row="4" Height="250">
-            <Button.Background>
-                <ImageBrush ImageSource="\Resources\Icons\exchange.png"/>
-            </Button.Background>
+            <Button.Content>
+                <Image Source="/Resources/Icons/exchange.png" />
+
+            </Button.Content>
         </Button>
         
     <!--#region грид даты -->
