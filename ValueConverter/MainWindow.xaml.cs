@@ -15,11 +15,16 @@ namespace ValueConverter
 
             _courseService = new CourseService(SellValuteCmb, BuyValuteCmb, SellAmountTB, BuyAmountTB, SellRationTBl, BuyRationTBl, UpdateDateTBl);
 
-            _courseService.LoadCourse();
         }
 
         private void ExchangeBtn_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            await _courseService.LoadCourse();
 
         }
     }

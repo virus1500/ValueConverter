@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ValueConverter"
         mc:Ignorable="d"
-        Title="Конвертация валют"  MinHeight="720" MinWidth="1280" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+        Title="Конвертация валют"  MinHeight="720" MinWidth="1280" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight" ResizeMode="NoResize" Loaded="Window_Loaded">
     <Grid Margin="50">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -70,7 +70,7 @@
     <!--#endregion-->
 
         <ComboBox DisplayMemberPath="Name" Name="SellValuteCmb" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="0"/>
-        <ComboBox Name="BuyValuteCmb" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <ComboBox DisplayMemberPath="Name" Name="BuyValuteCmb" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2"/>
         
         <TextBlock Grid.Row="0" Text="У меня есть"/>
         <TextBlock Grid.Row="0" Grid.Column="3" Text="Хочу приобрести"/>
