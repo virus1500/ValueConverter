@@ -31,7 +31,7 @@
                     <RowDefinition Height="25" />
                 </Grid.RowDefinitions>
                 <TextBlock x:Name="SellRationTBl" VerticalAlignment="Center"  Grid.Row="1" Text="текст" />
-                <TextBox x:Name="SellAmountTB" Text="1000" VerticalAlignment="Center"/>
+                <TextBox x:Name="SellAmountTB" TextChanged="SellAmountTB_TextChanged" Text="1000" VerticalAlignment="Center"/>
             </Grid>
         </Border>
         

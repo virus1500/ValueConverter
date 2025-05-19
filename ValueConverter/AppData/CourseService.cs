@@ -83,12 +83,14 @@ namespace ValueConverter.AppData
                 MessageBox.Show(exception.Message);
             }
         }
-        public void Convert()
+        public void ConvertValute()
         {
-            if (_sellValuteComboBox.SelectedItem != null && _buyValuteComboBox.SelectedItem != null)
-            {
+            SellValute = _sellValuteComboBox.SelectedItem as Valute;
+            BuyValute = _buyValuteComboBox.SelectedItem as Valute;
+            SellAmount = Convert.ToDouble(_sellValuteTB.Text);
+            BuyAmount = SellAmount * BuyValute.Nominal / SellValute.Nominal * SellValute.Value / BuyValute.Value;
 
-            }
+            _buyValuteTB.Text = BuyAmount.ToString();
         }
     }
 }
