@@ -31,6 +31,7 @@ namespace ValueConverter.AppData
         }
 
         public string RequestUrl { get; private set; } = "https://www.cbr-xml-daily.ru/daily_json.js";
+        public string LocalResquestUrl { get; private set; } = "\\\\fs\\Profiles$\\Students\\кИС-33\\Гоголев.Валерий\\Desktop\\courseJS\\course.json";
         public Valute SellValute { get; private set; }
         public Valute BuyValute { get; private set; }
         public double SellAmount { get; private set; }
@@ -80,6 +81,13 @@ namespace ValueConverter.AppData
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
+            }
+        }
+        public void Convert()
+        {
+            if (_sellValuteComboBox.SelectedItem != null && _buyValuteComboBox.SelectedItem != null)
+            {
+
             }
         }
     }
