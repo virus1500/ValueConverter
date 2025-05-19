@@ -90,7 +90,18 @@ namespace ValueConverter.AppData
             SellAmount = Convert.ToDouble(_sellValuteTB.Text);
             BuyAmount = SellAmount * BuyValute.Nominal / SellValute.Nominal * SellValute.Value / BuyValute.Value;
 
-            _buyValuteTB.Text = BuyAmount.ToString();
+            _buyValuteTB.Text = $"{BuyAmount:F2}";
+
+            CalculaitRatio();
+        }
+        private void CalculaitRatio()
+        {
+            SellRatio = BuyAmount / SellAmount;
+            BuyRatio = SellAmount / BuyAmount;
+
+            _sellRatioTBl.Text = $"{SellValute.Nominal} {SellValute.CharCode} = {BuyRatio:F4} {BuyValute.CharCode}";
+
+            _sellRatioTBl.Text = $"{BuyValute.Nominal} {BuyValute.CharCode} = {SellRatio:F4} {SellValute.CharCode}";
         }
     }
 }
