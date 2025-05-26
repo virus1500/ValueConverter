@@ -99,9 +99,9 @@ namespace ValueConverter.AppData
             SellRatio = BuyAmount / SellAmount;
             BuyRatio = SellAmount / BuyAmount;
 
-            _sellRatioTBl.Text = $"{SellValute.Nominal} {SellValute.CharCode} = {BuyRatio:F4} {BuyValute.CharCode}";
+            _sellRatioTBl.Text = $"{SellValute.Nominal} {SellValute.CharCode} = {SellRatio:F4} {BuyValute.CharCode}";
 
-            _sellRatioTBl.Text = $"{BuyValute.Nominal} {BuyValute.CharCode} = {SellRatio:F4} {SellValute.CharCode}";
+            _buyRatioTBl.Text = $"{BuyValute.Nominal} {BuyValute.CharCode} = {BuyRatio:F4} {SellValute.CharCode}";
         }
     }
 }

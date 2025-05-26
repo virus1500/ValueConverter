@@ -43,7 +43,7 @@
                     <RowDefinition Height="25" />
                 </Grid.RowDefinitions>
                 <TextBlock x:Name="BuyRationTBl" VerticalAlignment="Center"  Grid.Row="1" Text="текст"/>
-                <TextBox x:Name="BuyAmountTB" Text="100" VerticalAlignment="Center"/>
+                <TextBox TextChanged="BuyAmountTB_TextChanged" x:Name="BuyAmountTB" Text="100" VerticalAlignment="Center"/>
             </Grid>
         </Border>
         <Button x:Name="ExchangeBtn" Click="ExchangeBtn_Click" Grid.Column="2" Grid.Row="4" Height="250">
@@ -69,8 +69,8 @@
         </Grid>
     <!--#endregion-->
 
-        <ComboBox DisplayMemberPath="Name" Name="SellValuteCmb" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="0"/>
-        <ComboBox DisplayMemberPath="Name" Name="BuyValuteCmb" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2"/>
+        <ComboBox SelectionChanged="SellValuteCmb_SelectionChanged" DisplayMemberPath="Name" Name="SellValuteCmb" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="0"/>
+        <ComboBox SelectionChanged="BuyValuteCmb_SelectionChanged" DisplayMemberPath="Name" Name="BuyValuteCmb" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2"/>
         
         <TextBlock Grid.Row="0" Text="У меня есть"/>
         <TextBlock Grid.Row="0" Grid.Column="3" Text="Хочу приобрести"/>

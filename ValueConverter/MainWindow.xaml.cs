@@ -35,5 +35,29 @@ namespace ValueConverter
                 _courseService.ConvertValute();
             }
         }
+
+        private void SellValuteCmb_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (_courseService != null)
+            {
+                _courseService.ConvertValute();
+            }
+        }
+
+        private void BuyValuteCmb_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            if (_courseService != null)
+            {
+                _courseService.ConvertValute();
+            }
+        }
+
+        private void BuyAmountTB_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (_courseService != null)
+            {
+                _courseService.ConvertValute();
+            }
+        }
     }
 }
